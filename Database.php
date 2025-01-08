@@ -8,9 +8,9 @@ class Database{
         $this->pdo = new PDO($dsn); 
         $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
-    public function query($sql){
+    public function query($sql, $params) {
         $statament = $this->pdo->prepare($sql);
-        $statament->execute();  
+        $statament->execute($params);  
         return $statament;
     }
 }
