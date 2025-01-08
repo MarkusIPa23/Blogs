@@ -1,5 +1,4 @@
 <?php
-echo "<h1>Blogs</h1>";
 require("functions.php");
 require("Database.php");
 
@@ -25,15 +24,5 @@ if (isset($_GET["search_query"]) && $_GET["search_query"] != ""){
 
 $posts = $db->query($sql, $params)->fetchAll();
 
+require "views/index.view.php";
 
-echo "<form>";
-echo "<input name='search_query' />";
-echo "<button>Meklet</button>";
-echo "</form>";
-
-
-echo "<ul>";
-foreach ($posts as $post){
-    echo"<li>" .  $post["content"] . "</li>";
-}
-echo"</ul>";
