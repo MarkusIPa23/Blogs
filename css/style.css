@@ -1,4 +1,6 @@
-
+<?php
+required "view/index.view.php"
+?>
 <!DOCTYPE html>
 <html>
 <head>
