@@ -1,5 +1,5 @@
-<?php require "view/components/header.php" ?>
-<?php require "view/components/navbar.php" ?>
+<?php require "views/components/header.php" ?>
+<?php require "views/components/navbar.php" ?>
  <h1>Blogs</h1>
 
 
@@ -14,4 +14,4 @@
 <?php } ?>
 </ul>
 
-<?php require "view/components/footer.php" ?>
+<?php require "views/components/footer.php" ?>
