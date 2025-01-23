@@ -1,3 +1,3 @@
 <?php
 $pageTitle = "Kautkas";
-require "view/404.view.php";
+require "view/components/404.view.php";
