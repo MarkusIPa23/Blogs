@@ -1,4 +1,5 @@
 <?php
 $title = "yo";
-$pageTitle="Par mums";
-require "view/story.view.php";
+$pageTitle = "Par mums";
+require 'views/story.view.php';
+?>

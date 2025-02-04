@@ -1,6 +1,6 @@
-<?php require "view/components/header.php" ?>
-<?php require "view/components/navbar.php" ?>
+<?php require "views/components/header.php" ?>
+<?php require "views/components/navbar.php" ?>
 
  <h1><?= $post["content"] ?></h1>
 
-<?php require "view/components/footer.php" ?>
+<?php require "views/components/footer.php" ?>

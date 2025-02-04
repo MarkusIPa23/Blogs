@@ -3,6 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $pageTitle  ?? "Gejs"?></title>
+    <title><?= $pageTitle  ?? "Nav tadas lapas!"?></title>
 </head>
 <body>
