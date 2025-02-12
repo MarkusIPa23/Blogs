@@ -18,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $pdo->prepare($sql);
         $stmt->execute($params);
 
-
         header("Location: /");
         exit();
     }
@@ -40,13 +39,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <h1>Izveidot bloga ierakstu!</h1>
 
-<form method="POST" onsubmit="return captureContent()">
-    <label for="content">Contents:</label>
-    <div id="content" contenteditable="true"></div>
-    <input type="hidden" id="textContent" name="content">
-    <button type="submit">Izveidot</button>
-</form>
+<form action="" method="POST">
+    <label for="content">Ievadi bloga ierakstu:</label>
+    <input type="text" name="content" id="content" value="<?= htmlspecialchars($_POST['content'] ?? '')  ?>">
+    
+    
 
+    <button type="submit">Saglabāt</button>
+</form>
 <script>
     function captureContent() {
         const content = document.getElementById('content').innerText.trim();
@@ -57,6 +57,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         return true;
     }
 </script>
+<?php if (isset($errors["content"])): ?>
+        <p class="error"><?= $errors["content"] ?></p>
+    <?php endif; ?>
+
+   <?php if (empty($errors)) {} ?>
 
 </body>
 </html>
